@@ -3,7 +3,7 @@
 import streamlit as st
 from pickle import load
 
-model = load(open('../models/modelado-knearest-proyecto08.pkl', 'wb'))
+model = load(open('../models/modelado-knearest-proyecto08.pkl', 'rb'))
 class_dict = {"0": "Baja Calidad",
               "1": "Media Calidad",
               "2": "Alto Calidad"}
