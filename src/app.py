@@ -4,9 +4,12 @@ import streamlit as st
 import os
 from pickle import load
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "modelado-knearest-proyecto08.pkl")
 
+model = load(open(MODEL_PATH, "rb"))
 
-model = load(open('../models/modelado-knearest-proyecto08.pkl', 'rb'))
+#model = load(open('../models/modelado-knearest-proyecto08.pkl', 'rb'))
 class_dict = {"0": "Baja Calidad",
               "1": "Media Calidad",
               "2": "Alto Calidad"}
