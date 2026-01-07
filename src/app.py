@@ -1,7 +1,10 @@
 
 # your code here
 import streamlit as st
+import os
 from pickle import load
+
+
 
 model = load(open('../models/modelado-knearest-proyecto08.pkl', 'rb'))
 class_dict = {"0": "Baja Calidad",
